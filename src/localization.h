@@ -101,7 +101,6 @@ enum Texts
     TXT_grid_columns,
     TXT_grid_rows,
     TXT_default,
-    TXT_stylus_lower_button_function,
     TXT_stylus_upper_button_function,
 
 

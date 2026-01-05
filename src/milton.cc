@@ -1403,6 +1403,9 @@ void stylus_buttons_exec_function(MiltonInput *milton_input, Milton *milton, Sty
         case STYLUS_INCB:
             for (int i=0;i<5;++i) milton_increase_brush_size(milton);
             break;
+	case STYLUS_ZOOM:
+            milton_input->mode_to_set = MiltonMode::DRAG_ZOOM;
+	    break;
     }
 }
 

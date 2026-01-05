@@ -118,7 +118,6 @@ init_localization()
         EN(TXT_grid_columns, "Grid Columns");
         EN(TXT_grid_rows, "Grid Rows");
         EN(TXT_default, "Default");
-        EN(TXT_stylus_lower_button_function, "Stylus Lower Button Function");
         EN(TXT_stylus_upper_button_function, "Stylus Upper Button Function");
 
         EN(TXT_Action_DECREASE_BRUSH_SIZE, "Decrease brush size");

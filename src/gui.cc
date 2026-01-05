@@ -829,6 +829,10 @@ milton_imgui_tick(MiltonInput* input, PlatformState* platform,  Milton* milton, 
                     ImGui::RadioButton(result, (int*)&milton->settings->stylus_upper_button, STYLUS_ERASER);
                     ImGui::SameLine();
 
+                    snprintf(result, array_count(result), "%s%s", loc(TXT_Action_DRAG_ZOOM), "##upper");
+                    ImGui::RadioButton(result, (int*)&milton->settings->stylus_upper_button, STYLUS_ZOOM);
+                    ImGui::SameLine();
+
                     snprintf(result, array_count(result), "%s%s", loc(TXT_brush), "##upper");
                     ImGui::RadioButton(result, (int*)&milton->settings->stylus_upper_button, STYLUS_BRUSH);
 
@@ -837,27 +841,6 @@ milton_imgui_tick(MiltonInput* input, PlatformState* platform,  Milton* milton, 
 
                     snprintf(result, array_count(result), "%s%s", loc(TXT_increase_brush_size), "##upper");
                     ImGui::RadioButton(result, (int*)&milton->settings->stylus_upper_button, STYLUS_INCB);
-
-                    ImGui::Separator();
-
-                    ImGui::Text(loc(TXT_stylus_lower_button_function));
-
-                    snprintf(result, array_count(result), "%s%s", loc(TXT_default), "##lower");
-                    ImGui::RadioButton(result, (int*)&milton->settings->stylus_lower_button, STYLUS_DEFAULT);
-                    ImGui::SameLine();
-
-                    snprintf(result, array_count(result), "%s%s", loc(TXT_eraser), "##lower");
-                    ImGui::RadioButton(result, (int*)&milton->settings->stylus_lower_button, STYLUS_ERASER);
-                    ImGui::SameLine();
-
-                    snprintf(result, array_count(result), "%s%s", loc(TXT_brush), "##lower");
-                    ImGui::RadioButton(result, (int*)&milton->settings->stylus_lower_button, STYLUS_BRUSH);
-
-                    snprintf(result, array_count(result), "%s%s", loc(TXT_decrease_brush_size), "##lower");
-                    ImGui::RadioButton(result, (int*)&milton->settings->stylus_lower_button, STYLUS_DECB);
-
-                    snprintf(result, array_count(result), "%s%s", loc(TXT_increase_brush_size), "##lower");
-                    ImGui::RadioButton(result, (int*)&milton->settings->stylus_lower_button, STYLUS_INCB);
                 }
 
                 ImGui::Separator();
